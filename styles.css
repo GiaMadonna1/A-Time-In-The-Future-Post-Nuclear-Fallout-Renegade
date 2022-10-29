@@ -1,8 +1,9 @@
-* {
+margin { 
     background-color: black;
 }
 
-.starter-background {
-    width: 1840px;
-    height: 971px;
+.play-screen-lvl-1 {
+    position: relative;
+    z-index: 2;
 }
+

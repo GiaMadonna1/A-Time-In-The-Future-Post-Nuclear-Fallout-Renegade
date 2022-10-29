@@ -1,26 +1,22 @@
-
-
-
-
 function newImg(url,left,bottom) {
     let gameElements = document.createElement ('img')
     gameElements.src =url
-    gameElements.style.position = 'fixed'
-    gameElements.style.left = left + 'px'
-    gameElements.style.bottom= bottom + 'px'
+    gameElements.style.position = 'absolute'
     document.body.append(gameElements)
     return gameElements
 }
 
 function createTheBossman(x,y) {
-    const element = newImg('Images/AverageGameCharacter.webp')
+    const element = newImg('Images/average-game-character.gif')
+    element.style.height = '100px'
     element.style.zIndex = 1;
+
 }
 
 function moveTheBossman (element) {
-    element.style.position = 'fixed'
+    element.style.position= 'fixed'
 
-    function moveCoords(left,bottom){
+    function moveCoords(left, bottom){
         element.style.left= left + 'px'
         element.style.bottom= bottom = 'px'
     }
@@ -70,6 +66,9 @@ function moveTheBossman (element) {
             callback(direction)
         })
     }
+    
+    move(element).withArrowKeys(x,y)
+
 
     return {
         to: moveCoords,
@@ -78,7 +77,7 @@ function moveTheBossman (element) {
 }
 
 
-createTheBossman(10, 5)
+createTheBossman(100 , 110)
 
 
 
