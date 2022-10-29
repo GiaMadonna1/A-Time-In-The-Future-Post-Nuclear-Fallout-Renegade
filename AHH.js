@@ -10,6 +10,7 @@ function newImg(url,left,bottom) {
 
 function theBackground(url, left, bottom) {
     let newBackground = newImg(url, left, bottom)
+    newBackground.style.zIndex = 2
 }
 
 
